@@ -12,9 +12,9 @@
 
 <body>
     <div id="root">
-        <word-relay/>
-        <word-relay/>
-        <word-relay/>
+        <word-relay></word-relay>
+        <word-relay></word-relay>
+        <word-relay></word-relay>
     </div>
     <script>
         Vue.component('word-relay', {
@@ -28,7 +28,7 @@
                     <div>{{result}}</div>
             </div>
             `,
-            data: {
+            data() {
                 return {
                     word: '나나나',
                     result: '',
