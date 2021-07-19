@@ -19,19 +19,21 @@
     <script>
         Vue.component('word-relay', {
             template: `
-            
-             <div>{{word}}</div>
-                  <form v-on:submit="onSubmitForm">
-                     <input type="text" ref="answer" v-model="value">
-                     <button type="submit">입력!</button>
-                   </form>
-              <div>{{result}}</div>
-    
+            <div>
+                    <div>{{word}}</div>
+                        <form v-on:submit="onSubmitForm">
+                            <input type="text" ref="answer" v-model="value">
+                            <button type="submit">입력!</button>
+                        </form>
+                    <div>{{result}}</div>
+            </div>
             `,
             data: {
-                word: '나나나',
-                result: '',
-                value: '',
+                return {
+                    word: '나나나',
+                    result: '',
+                    value: '',
+                };
             },
             methods: {
                 onSubmitForm(e) {
